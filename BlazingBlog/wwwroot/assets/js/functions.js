@@ -6,8 +6,6 @@
 
 //});
 
-alert('Test 1');
-
 document.addEventListener("DOMContentLoaded", _ => {
     const topNav = document.getElementsByClassName("topnav")[0];
 
