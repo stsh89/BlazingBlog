@@ -9,13 +9,14 @@ namespace BlazingBlog.Data.Entities
 		[Required, MaxLength(100)]
 		public string Title { get; set; }
 
+		[MaxLength(125)]
 		public string Slug { get; set; }
 
 		[Required, MaxLength(100)]
 		public string Image { get; set; }
 
 		[Required, MaxLength(500)]
-		public string Introduction { get; set }
+		public string Introduction { get; set; }
 
 		[Required]
 		public string Content { get; set; }
