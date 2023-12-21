@@ -63,6 +63,8 @@ namespace BlazingBlog.Services
 
 				await userStore.SetUserNameAsync(adminUser, AdminAccount.Email, CancellationToken.None);
 
+				var emailStore = (IUserEmailStore<ApplicationUser>)userStore;
+				await emailStore.SetEmailAsync(adminUser, AdminAccount.Email, CancellationToken.None);
 				var result = await userManager.CreateAsync(adminUser, AdminAccount.Password);
 
 				if (!result.Succeeded)
