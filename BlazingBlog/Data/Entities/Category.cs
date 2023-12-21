@@ -14,5 +14,13 @@ namespace BlazingBlog.Data.Entities
 		public string Slug { get; set; }
 
 		public bool ShowOnNavbar { get; set; }
+
+		public static Category[] GetSeedCategories()
+		{
+			return [
+				new Category { Name = "C#", Slug = "c-sharp", ShowOnNavbar = true },
+				new Category { Name = "Blazor", Slug = "blazor", ShowOnNavbar = true },
+			];
+		}
 	}
 }
